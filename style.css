@@ -122,23 +122,15 @@ a {
 
 /* cover */
 #cover {
-    padding: 0px;
-    height: 100vh;
-    flex-direction: row;
-    justify-content: end;
-    /* background-image: url('./assets/images/me-cover-flip.png'); */
-    background-position: center;
+    height: 70vh;
+    background-image: url('./assets/images/me-cover-flip.png');
+    background-position: 58% 30%;
+    justify-content: center;
 }
 
-#cover img {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-}
-
-#cover div {
-    position: relative;
-    padding-right: 10%;
+#cover > div {
+    margin-top: 15%;
+    margin-left: 40%;
 }
 
 .name {
@@ -146,20 +138,20 @@ a {
     font-family: "Alex Brush", cursive;
     font-weight: 400;
     font-style: normal;
+    color: #000000;
 }
 
 .title {
     font-size: 26pt;
-    font-weight: 300;
-    letter-spacing: 10px;
+    font-weight: 400;
+    letter-spacing: 12px;
 }
 
 .line {
-    position: absolute;
-    top: -5px;
-    background: linear-gradient(to right, darkgreen, whitesmoke);
+    background: linear-gradient(to right, darkgreen, lime);
+    width: 98%;
     height: 4px;
-    border-radius: 100px;
+    border-radius: 50px;
 }
  
 /* profile */
@@ -290,39 +282,28 @@ footer a {
 /* responsive design */
 
 /* mobile */
-@media (max-width: 575px) {
+@media (max-width: 767px) {
     
     header {
         justify-content: center;
     }
 
     /* cover */
-    #cover img {
-        opacity: 0;
-    }
-
-    #cover {
-        /* padding-top: %; */
-        height: 70vh;
-        /* padding: 50% 0%; */
-        background-image: url('./assets/images/me-cover-flip.png');
-        background-position: 58% 30%;
-        /* align-items: end; */
-    }
-
-    #cover > div {
-        padding-right: 5%;
-        margin-top: 70%;
+    #cover > div{
+        margin-right: 3%;
+        margin-top: 50%;
     }
 
     .name {
-        font-size: 45pt;
+        font-size: 35pt;
         text-align: left;
     }
     
     .title {
         font-size: 11pt;
+        letter-spacing: 7px;
         font-weight: bolder;
+        padding-bottom: 5%;
     }
 
     /* profile */    
@@ -407,5 +388,30 @@ footer a {
     
     footer a {
         font-size: medium;
+    }
+}
+
+/* iPad and tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* cover */
+    #cover {
+        height: 40vh;
+    }
+
+    #cover > div {
+        margin-top: 30%;
+    }
+
+    .name {
+        font-size: 41pt;
+    }
+
+    .title {
+        font-size: 20pt;
+        letter-spacing: 4px;
+    }
+
+    .line {
+        width: 100%;
     }
 }
