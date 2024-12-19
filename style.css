@@ -1,0 +1,280 @@
+@keyframes load {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: 'Alex Brush';
+    src: url('./fonts/AlexBrush-Regular.ttf');
+
+    font-family: 'DM Sans';
+    src: url('./fonts/DMSans-VariableFont_opsz\,wght.ttf');
+}
+
+::-webkit-scrollbar{
+    width: .50rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: limegreen;
+} 
+
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+* {
+    margin: 0px;
+}
+
+html {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    scroll-behavior: smooth;
+
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100px);
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+h2 {
+    color: limegreen;
+    letter-spacing: 2px;
+}
+
+p {
+    margin-top: 20px;
+    font-size: large;
+    text-align: center;
+    color: #382f28;
+}
+
+.link {
+    margin-top: 20px;
+    color: green;
+    transition: 0.3 ease 0s;
+}
+
+.link:hover {
+    color: lime;
+}
+
+/* Header */
+header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    height: 50px;
+    z-index: 1;
+}
+
+ul {
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+li {
+    position: relative;
+}
+
+li::after {
+    content: '';
+    background-color: limegreen;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: 0.3s ease 0s;
+}
+
+li:hover::after {
+    transform: scaleX(1);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 14pt;
+}
+
+/* cover */
+#cover {
+    flex-direction: row;
+    justify-content: end;
+}
+
+#cover img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+#cover div {
+    position: relative;
+    padding-right: 10%;
+}
+
+.name {
+    font-size: 68pt;
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title {
+    font-size: 26pt;
+    font-weight: 300;
+    letter-spacing: 10px;
+}
+
+.line {
+    position: absolute;
+    top: -5px;
+    background: linear-gradient(to right, darkgreen,#000000);
+    height: 4px;
+    border-radius: 100px;
+}
+ 
+/* profile */
+#profile img {
+    margin-bottom: 30px;
+    width: 200px;
+    border-radius: 5%;
+    box-shadow: 0px 0px 10px 1px #5e17eb57;
+}
+
+#profile .bio {
+    width: 40%;
+}
+
+/* skills */
+#skills > div {
+    margin-top: 50px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+#skills > div {
+    padding: 100px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#skills div div {
+    width: 25%;
+}
+
+#skills img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+i {
+    font-size: 60pt;
+}
+
+/* projects */
+#projects > div {
+    padding: 50px 200px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+#projects > div div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: lime;
+    border: none;
+    border-radius: 5px;
+    font-size: 14pt;
+    cursor: pointer;
+    transition: 0.3s ease 0s;
+}
+
+/* contact */
+#contact p {
+    width: 25%;
+    font-size: larger;
+}
+
+#contact div {
+    margin-top: 25px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+#contact div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contact img {
+    width: 50px;
+    border-radius: 50%;
+    transition: 0.3s ease 0s;
+}
+
+/* hover effect */
+#projects button:hover,
+#contact img:hover {
+    color: white;
+    box-shadow: 0px 0px 10px 1px lime;
+}
+
+/* footer */
+footer {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgb(0, 59, 0), #000000);
+}
+
+footer h2 {
+    color: white;
+}
+
+footer p {
+    color: white;
+    text-align: left;
+    font-weight: lighter;
+}
+
+footer a {
+    color: white;
+    display: block;
+    font-weight: lighter;
+}
